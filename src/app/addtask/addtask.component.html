@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="row">
+        <div class="offset-3">
+            <div class="col-md-6">
+                <form name="form" #f="ngForm" (ngSubmit)="sendTaskDetails()" novalidate class="addtask-form">
+                    <div class="form-group">
+                        <label for="taskId">Task Id</label>
+                        <input type="text" id="taskId" class="form-control" name="taskId" 
+                        placeholder="Task ID" [(ngModel)]="model.taskId">
+                    </div>
+                    <div class="form-group">
+                        <label for="task">Task</label>
+                        <input type="text" id="task" class="form-control" name="task" 
+                        placeholder="Task" [(ngModel)]="model.task">
+                    </div>
+                    <div class="form-group">
+                        <label for="priority">Priority</label>
+                        <input type="text" id="priority" class="form-control" name="priority" 
+                        placeholder="Priority" [(ngModel)]="model.priority"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="parentId">Parent Id</label>
+                        <input type="text" id="parentId" class="form-control" name="parentId" 
+                        placeholder="Parent ID" [(ngModel)]="model.parentId"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="parentTask">Parent Task</label>
+                        <input type="text" id="parentTask" class="form-control" name="parentTask" 
+                        placeholder="Parent Task" [(ngModel)]="model.parentTask"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="startDate">Start Date</label>
+                        <input type="text" id="startDate" class="form-control" name="startDate" 
+                        placeholder="Start Date" [(ngModel)]="model.startDate"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="endDate">Task</label>
+                        <input type="text" id="endDate" class="form-control" name="endDate" 
+                        placeholder="End Date" [(ngModel)]="model.endDate"/>
+                    </div>
+
+                    <button type="submit" class="btn btn-info pull-right">
+                        <i class="fa fa-envelope-o"></i>
+                        <span> Add Task</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
